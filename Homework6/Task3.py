@@ -16,6 +16,8 @@ print(sum_)
 """
 
 number_ = input('Введите вещественное число: ')
+# result = [char for char in number_]
 lst_sort = list(map(int, filter(lambda x: x != '.', [number_[i] for i in range(len(number_))])))
 # print(lst_sort)
+# print(result)
 print(sum(lst_sort, 0))

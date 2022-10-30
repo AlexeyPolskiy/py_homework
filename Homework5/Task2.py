@@ -50,8 +50,8 @@ max_move = max_number_move
 
 
 def game_player_vs_smart_bot(sweets, players, messages):
-    global max_number_move
     count = sweets[2]
+    global max_number_move
 
     while sweets[0] > 0:
         if sweets[0] == (max_number_move and sweets[0] < max_number_move and sweets[0] > 1):
