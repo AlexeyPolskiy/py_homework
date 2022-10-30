@@ -27,5 +27,5 @@ lst_ = list(map(int, input(f'Введите элементы списка: ').sp
 # print(lst_)
 # print(len(lst_))
 lst_sort = [lst_[i] for i in range(len(lst_)) if i % 2 != 0]
-# print(lst_sort)
+print(lst_sort)
 print(f'- {lst_} -> на нечётных позициях элементы {lst_sort}, ответ: {sum(lst_sort,0)}')
