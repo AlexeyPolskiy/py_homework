@@ -55,7 +55,7 @@ def export_txt_menu():
             print("Имя нового файла не может быть таким же, как имя корневой базы (databases)!")
             continue
         elif check is None:
-            print("Имя нового файла должно модержать только буквы!")
+            print("Имя нового файла должно содержать только буквы!")
             continue
         move_data_csv_to_txt("databases/databases.csv", f"databases/{name}.txt")
         print("Данные успешно экспортированы!")
