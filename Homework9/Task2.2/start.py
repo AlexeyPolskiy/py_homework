@@ -1,4 +1,4 @@
-from modules.user_interface import menu
+from user_interface import main_menu
 
 
-menu()
+main_menu()

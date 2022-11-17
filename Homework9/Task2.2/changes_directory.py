@@ -1,10 +1,12 @@
+import os
 
 
 def create_directory():
-    """
-    Создание справочника
-    """
-    return
+    first_line = ['Ключ ', 'Имя ', 'Фамилия ', 'Номер телефона ', 'Примечание ']
+    if os.path.exists('tel_directory.txt') is not True:
+        temp = open('tel_directory.txt', "w")
+        temp.writelines(first_line)
+        temp.close()
 
 
 def view_entry():
@@ -28,7 +30,7 @@ def del_entry():
     return
 
 
-def search_entry():
+def find_entry():
     """
     Поиск по фамилии, номеру телефона записи
     """
