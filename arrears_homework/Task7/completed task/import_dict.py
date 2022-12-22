@@ -21,7 +21,7 @@ def import_dict_1(import_line):
     str_imp_line = ''
     for i in range(len(import_line)):
         str_imp_line += ' '.join(import_line[i][:-1].split(" *** ")) + '\n'
-    with open("../database/tel_directory.txt", 'a', encoding="utf-8") as dict_database:
+    with open("database/tel_directory.txt", 'a', encoding="utf-8") as dict_database:
         dict_database.write(str_imp_line)
     print("Импорт данных выполнен")
     return
@@ -35,7 +35,7 @@ def import_dict_2(import_line):
         else:
             str_imp_line += (import_line[i][:-1]) + ' '
     # print(str_imp_line)
-    with open("../database/tel_directory.txt", 'a', encoding="utf-8") as dict_database:
+    with open("database/tel_directory.txt", 'a', encoding="utf-8") as dict_database:
         dict_database.write(str_imp_line + '\n')
         print("Импорт данных выполнен")
     return

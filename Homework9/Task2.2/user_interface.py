@@ -6,7 +6,7 @@ from export_dict import *
 
 def main_menu():
     create_directory()
-    print("\nГлавное меню. \n"
+    print("\nГлавное меню: \n"
           "1 - Действия со справочником \n"
           "2 - Экспорт справочника \n"
           "3 - Импорт справочника \n"
@@ -34,7 +34,7 @@ def menu_action():
           "2 - Добавление записи \n"
           "3 - Поиск записи \n"
           "4 - Удаление записи \n"
-          "9 - Вернуться в основное меню \n")
+          "9 - Вернуться в главное меню \n")
     lst_num = ['1', '2', '3', '4', '9']
     num_menu = input(f'Введите номер необходимого действия ==> ')
     if check_menu(num_menu, lst_num) is True:
@@ -61,10 +61,9 @@ def menu_action():
 def menu_view():
     print("\nТелефонный справочник:")
     print('  ', 'Имя ', 'Фамилия ', 'Номер телефона ', 'Примечание ')
-    last_numb_string, lst_tel = view_entry()
+    last_num, lst_tel = view_entry()
     for view in lst_tel:
         print(view)
-    return last_numb_string
 
 
 def menu_add():
@@ -86,14 +85,16 @@ def menu_search():
 
 
 def menu_del():
-    last_num = menu_view()
+    last_num, lst_tel = view_entry()
+    print("\nТелефонный справочник:")
+    print('  ', 'Имя ', 'Фамилия ', 'Номер телефона ', 'Примечание ')
+    for view in lst_tel:
+        print(view)
     numb_del = input("\nВведите порядковый номер контакта, который хотите удалить ==> ")
     if numb_del.isdigit() is True and int(numb_del) <= last_num:
         temp_del = input("\nВы уверены? Да/Нет: ")
         if temp_del in ['Да', 'да']:
             del_entry(int(numb_del))
-        # elif temp_del in ['Нет', 'нет']:
-        #     pass
     else:
         print(f"Вы ввели не корректный номер: {numb_del}")
 

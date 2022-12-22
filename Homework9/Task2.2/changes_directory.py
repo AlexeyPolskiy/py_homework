@@ -3,7 +3,7 @@ import os
 
 def create_directory():
     if os.path.exists('tel_directory.txt') is not True:
-        temp = open('tel_directory.txt', "w")
+        temp = open('tel_directory.txt', "w", encoding="utf-8")
         # temp.writelines(first_line)
         temp.close()
 
