@@ -13,12 +13,12 @@ from game import game_human, game_bot
 if __name__ == '__main__':
     candy_full = int(input('Введите количество конфет: '))
     candy_max = int(input('Введи максимальное количество конфет за ход: '))
-    game = main_menu()
-    if game == '9':
+    num_menu = main_menu()
+    if num_menu == '9':
         print('\nИгры окончены')
-    elif game == '1':
+    elif num_menu == '1':
         game_human(candy_full, candy_max, 1)
-    elif game == '2':
+    elif num_menu == '2':
         game_bot(candy_full, candy_max, 1)
 
 

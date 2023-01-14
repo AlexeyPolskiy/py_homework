@@ -11,7 +11,7 @@ def main_menu():
     if check_menu(num_menu, num_lst) is True:
         return num_menu
     else:
-        main_menu()
+        return main_menu()
 
 
 
