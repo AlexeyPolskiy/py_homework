@@ -30,5 +30,6 @@ def decompress(txt):
 
 
 str_ = "WWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWqWWWWWWWWWWW"
+# print(str_)
 print(compress(str_))
 print(decompress(compress(str_)))
