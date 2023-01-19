@@ -36,6 +36,7 @@ def print_maps():
     print(maps[8])
 
 # Сделать ход в ячейку
+
 def step_maps(step,symbol):
     ind = maps.index(step)
     maps[ind] = symbol
