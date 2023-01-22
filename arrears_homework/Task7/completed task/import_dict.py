@@ -2,8 +2,8 @@ import os
 
 
 def import_file():
-    if os.path.exists("temp_files/import_file.txt") is True:
-        with open("temp_files/import_file.txt", 'r', encoding="utf-8") as file_dict:
+    if os.path.exists("import_file/import_file.txt") is True:
+        with open("import_file/import_file.txt", 'r', encoding="utf-8") as file_dict:
             line_temp = file_dict.readlines()
             # print(line_temp)
             # print(type(line_temp))
