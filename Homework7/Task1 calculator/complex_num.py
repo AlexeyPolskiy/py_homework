@@ -5,11 +5,11 @@ def check_complex(num: str):
     """
     z = a + bi
     """
-    if '+' and 'i' or 'j' in num:
-        print(num)
+    if '+' and 'i' in num:
+        # print(num)
         return True
     else:
-        print(f"Вы ввели не корректные данные: {num}")
+        # print(f"Вы ввели не корректные данные: {num}")
         return False
 
 
