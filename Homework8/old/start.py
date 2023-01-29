@@ -4,6 +4,7 @@
 """
 
 
-import modules.user_interface as ui
+from initial_input import num_input
 
-ui.authorization()
+if __name__ == '__main__':
+    num_input()
