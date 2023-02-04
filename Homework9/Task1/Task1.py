@@ -52,30 +52,30 @@ def step_maps(step,symbol):
 
 # Получить текущий результат игры
 def get_result():
-    win = ""
+    win_player = ""
 
     for i in victories:
         if maps[i[0]] == emoji.emojize(":cross_mark:") and maps[i[1]] == emoji.emojize(":cross_mark:") and \
                 maps[i[2]] == emoji.emojize(":cross_mark:"):
-            win = emoji.emojize(":cross_mark:")
+            win_player = emoji.emojize(":cross_mark:")
         if maps[i[0]] == emoji.emojize(":hollow_red_circle:") and maps[i[1]] == emoji.emojize(":hollow_red_circle:") \
                 and maps[i[2]] == emoji.emojize(":hollow_red_circle:"):
-            win = emoji.emojize(":hollow_red_circle:")
+            win_player = emoji.emojize(":hollow_red_circle:")
 
-    return win
+    return win_player
 
 
 # Основная программа
 game_over = False
 player1 = True
 
-while game_over == False:
+while not game_over:
 
     # 1. Показываем карту
     print_maps()
 
     # 2. Спросим у играющего куда делать ход
-    if player1 == True:
+    if player1:
         symbol = emoji.emojize(":cross_mark:")
         step = int(input("Человек 1, ваш ход: "))
     else:
